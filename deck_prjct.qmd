@@ -17,7 +17,7 @@ author:
     email: cjiang@hsph.harvard.edu
     affiliations: Harvard Biostatistics
   - name: Martha Boahene
-    orcid: 
+    orcid: 0009-0005-7317-0304
     email: mboahene@g.harvard.edu
     affiliations: Harvard Biostatistics
   - name: Nima Hejazi
@@ -27,31 +27,41 @@ author:
 date: last-modified
 bibliography: refs.bib
 csl: https://www.zotero.org/styles/journal-of-the-royal-statistical-society
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
 ## Global burden of TB, HIV, and their intersection
 
 ::: {style="font-size: 85%;"}
--   Tuberculosis (TB) remains a **leading infectious disease killer** worldwide.
+-   Tuberculosis (TB) remains a **leading infectious disease killer**
+    worldwide.
 -   An estimated **40 million people** were living with HIV in 2022.
--   **Drug-resistant TB (MDR/RR-TB)** causes \~500,000 new cases and 200,000 deaths annually.
--   For people living with HIV (PLHIV), **TB is the leading cause of death** (33%).
--   The convergence of these epidemics creates a critical public health challenge.
+-   **Drug-resistant TB (MDR/RR-TB)** causes \~500,000 new cases and
+    200,000 deaths annually.
+-   For people living with HIV (PLHIV), **TB is the leading cause of
+    death** (33%).
+-   The convergence of these epidemics creates a critical public health
+    challenge.
 :::
 
 . . .
 
 ::: {style="font-size: 85%; background-color: #f0f8ff; padding: 10px; border-left: 5px solid #4682b4;"}
-**Key message**: MDR/RR-TB in PLHIV is a high-mortality, evidence-scarce condition.
+**Key message**: MDR/RR-TB in PLHIV is a high-mortality, evidence-scarce
+condition.
 :::
 
 ## New hope: shorter, all-oral MDR/RR-TB regimens
 
 ::: {style="font-size: 85%;"}
-Recent trials have introduced **short-course, all-oral regimens** for MDR/RR-TB:
+Recent trials have introduced **short-course, all-oral regimens** for
+MDR/RR-TB:
 
 -   **TB-PRACTECAL trial** (Nyang’wa et al., 2022, 2024):
-    -   6-month regimen: **6BPaLM** (Bedaquiline, Pretomanid, Linezolid, Moxifloxacin)
+    -   6-month regimen: **6BPaLM** (Bedaquiline, Pretomanid, Linezolid,
+        Moxifloxacin)
     -   Non-inferior to standard care.
 -   **endTB trial** (Guglielmetti et al., 2025):
     -   9-month regimens: **9BLMZ, 9BCLLfxZ, 9BDLLfxZ**
@@ -67,61 +77,85 @@ Recent trials have introduced **short-course, all-oral regimens** for MDR/RR-TB:
 ## WHO guidance and the evidence gap in PLHIV
 
 ::: {style="font-size: 85%;"}
--   **WHO 2025 guidelines** recommend eight all-oral regimens for MDR/RR-TB.
--   Prioritize **6BPaLM** (6-month) over 9-month regimens due to shorter duration.
+-   **WHO 2025 guidelines** recommend eight all-oral regimens for
+    MDR/RR-TB.
+-   Prioritize **6BPaLM** (6-month) over 9-month regimens due to shorter
+    duration.
 -   **All recommendations are based on low-certainty evidence**.
 
 . . .
 
-**Critical limitation**: - Historically, PLHIV were excluded from TB trials. - Current evidence is **not specific to PLHIV**. - Effect of HIV co-infection on regimen efficacy remains unknown.
+**Critical limitation**: - Historically, PLHIV were excluded from TB
+trials. - Current evidence is **not specific to PLHIV**. - Effect of HIV
+co-infection on regimen efficacy remains unknown.
 :::
 
 . . .
 
 ::: {style="font-size: 85%; background-color: #f8f8f8; padding: 10px; border-left: 5px solid #2e8b57;"}
-**Question**: Is 6BPaLM truly preferable to 9-month regimens in immunocompromised populations like PLHIV?
+**Question**: Is 6BPaLM truly preferable to 9-month regimens in
+immunocompromised populations like PLHIV?
 :::
 
 ## The data fusion challenge
 
 ::: {style="font-size: 85%;"}
-We have two high-quality RCTs: - **TB-PRACTECAL** (6BPaLM vs. standard care) - **endTB** (9-month regimens vs. standard care)
+We have two high-quality RCTs: - **TB-PRACTECAL** (6BPaLM vs. standard
+care) - **endTB** (9-month regimens vs. standard care)
 
-**But**: - Different standard-of-care arms across regions and time. - No common treatment arm between trials. - Limited sample size of PLHIV in each trial.
+**But**: - Different standard-of-care arms across regions and time. - No
+common treatment arm between trials. - Limited sample size of PLHIV in
+each trial.
 :::
 
 . . .
 
 ::: {style="font-size: 85%;"}
-**We cannot conduct a new RCT** – must leverage existing data through **cross-trial data fusion**.
+**We cannot conduct a new RCT** – must leverage existing data through
+**cross-trial data fusion**.
 :::
 
 ## Research aims
 
 ::: {style="font-size: 85%;"}
-**Primary aim**: Compare the efficacy of 6BPaLM versus each endTB regimen (9BLMZ, 9BCLLfxZ, 9BDLLfxZ) **in PLHIV**.
+**Primary aim**: Compare the efficacy of 6BPaLM versus each endTB
+regimen (9BLMZ, 9BCLLfxZ, 9BDLLfxZ) **in PLHIV**.
 
-**Approach**: - Use **target trial emulation** framework (Hernán & Robins, 2016). - Pool individual patient data (IPD) from both trials. - Apply **causal data fusion methods** to estimate direct contrasts.
+**Approach**: - Use **target trial emulation** framework (Hernán &
+Robins, 2016). - Pool individual patient data (IPD) from both trials. -
+Apply **causal data fusion methods** to estimate direct contrasts.
 :::
 
 . . .
 
 ::: {style="font-size: 85%; background-color: #e6f7ff; padding: 10px; border-left: 5px solid #0077b6;"}
-**In this talk**, we will introduce four methodological strategies for data fusion in this cross-trial setting.
+**In this talk**, we will introduce four methodological strategies for
+data fusion in this cross-trial setting.
 :::
 
 ## Overview of source trials: TB-PRACTECAL vs. endTB
 
 ::: {style="font-size: 85%;"}
-**TB-PRACTECAL** (Nyang’wa et al., 2022, 2024): - **Design**: Phase 2/3 non-inferiority RCT - **Countries**: South Africa, Belarus, Uzbekistan - **Regimens tested**: 6-month all-oral regimens vs. standard care - **Key finding**: 6BPaLM non-inferior to standard care - **Primary endpoint**: Composite unfavorable outcome at 72 weeks
+**TB-PRACTECAL** (Nyang’wa et al., 2022, 2024): - **Design**: Phase 2/3
+non-inferiority RCT - **Countries**: South Africa, Belarus, Uzbekistan -
+**Regimens tested**: 6-month all-oral regimens vs. standard care - **Key
+finding**: 6BPaLM non-inferior to standard care - **Primary endpoint**:
+Composite unfavorable outcome at 72 weeks
 
-**endTB** (Guglielmetti et al., 2025): - **Design**: Phase 3 non-inferiority RCT - **Countries**: Georgia, India, Kazakhstan, Lesotho, Pakistan, Peru, South Africa - **Regimens tested**: 9-month all-oral regimens vs. standard care - **Key finding**: 9BLMZ, 9BCLLfxZ, 9BDLLfxZ non-inferior to standard care - **Primary endpoint**: Favorable outcome at 73 weeks
+**endTB** (Guglielmetti et al., 2025): - **Design**: Phase 3
+non-inferiority RCT - **Countries**: Georgia, India, Kazakhstan,
+Lesotho, Pakistan, Peru, South Africa - **Regimens tested**: 9-month
+all-oral regimens vs. standard care - **Key finding**: 9BLMZ, 9BCLLfxZ,
+9BDLLfxZ non-inferior to standard care - **Primary endpoint**: Favorable
+outcome at 73 weeks
 :::
 
 . . .
 
 ::: {style="font-size: 85%; background-color: #f0f8ff; padding: 10px; border-left: 5px solid #4682b4;"}
-**Common features**: - Sponsored by Médecins Sans Frontières (MSF) - Did not restrict enrollment of PLHIV - Used coordinated pharmacovigilance - Both demonstrate efficacy of shortened regimens
+**Common features**: - Sponsored by Médecins Sans Frontières (MSF) - Did
+not restrict enrollment of PLHIV - Used coordinated pharmacovigilance -
+Both demonstrate efficacy of shortened regimens
 :::
 
 ## Key differences between trials
@@ -140,70 +174,128 @@ We have two high-quality RCTs: - **TB-PRACTECAL** (6BPaLM vs. standard care) - *
 . . .
 
 ::: {style="font-size: 85%;"}
-**Critical implication**: - Standard care differs **both across regions and over time** - Direct comparison is **not straightforward** due to differing controls - PLHIV subgroup analyses are underpowered in each trial alone
+**Critical implication**: - Standard care differs **both across regions
+and over time** - Direct comparison is **not straightforward** due to
+differing controls - PLHIV subgroup analyses are underpowered in each
+trial alone
 :::
 
 ## Challenges for cross-trial data fusion
 
 ::: {style="font-size: 85%;"}
-**1. No head-to-head comparison** - Trials compared regimens to **different standard-of-care arms** - No common treatment arm between trials
+**1. No head-to-head comparison** - Trials compared regimens to
+**different standard-of-care arms** - No common treatment arm between
+trials
 
-**2. Heterogeneity in standard care** - Standard care varied by country and enrollment period - Changes in WHO guidelines during trial periods
+**2. Heterogeneity in standard care** - Standard care varied by country
+and enrollment period - Changes in WHO guidelines during trial periods
 
-**3. Regional and population differences** - Limited overlap in study regions - Different background epidemiology, healthcare systems
+**3. Regional and population differences** - Limited overlap in study
+regions - Different background epidemiology, healthcare systems
 
-**4. Limited PLHIV sample size** - Though inclusive, PLHIV subgroups remain small in each trial - Traditional meta-analysis insufficient for subgroup inference
+**4. Limited PLHIV sample size** - Though inclusive, PLHIV subgroups
+remain small in each trial - Traditional meta-analysis insufficient for
+subgroup inference
 :::
 
 . . .
 
 ::: {style="font-size: 85%; background-color: #fff0f0; padding: 10px; border-left: 5px solid #b22222;"}
-**We need causal data fusion methods** that can: - Combine IPD from both trials - Account for differing standard care - Estimate direct contrasts between investigational regimens - Provide valid inference for PLHIV subgroup
+**We need causal data fusion methods** that can: - Combine IPD from both
+trials - Account for differing standard care - Estimate direct contrasts
+between investigational regimens - Provide valid inference for PLHIV
+subgroup
 :::
 
 ## Overview of four data fusion methods
 
 ::: {style="font-size: 75%;"}
 | Method | Key Idea | Target Population |
-|--------------|---------------------------------------------|--------------|
+|----------------|-----------------------------------------|----------------|
 | **(1A) Traditional Approach** | Compare each treatment vs. its own control, then difference the effects | $\Omega$ (Pooled) |
 | **(1B) Observational Study Approach** | Combine treatment arms, analyze as observational study with covariate adjustment | $\Omega$ (Pooled) |
 | **(2A) Indirect Method** | Decompose contrast into treatment effect difference + control effect difference | $\Omega$ (Pooled) |
 | **(2B) Direct Method** | Estimate direct contrast by pooling data and adjusting for trial differences | $\Omega$ (Pooled) |
 :::
 
-$\Omega$: target population consisting of individuals at risk of TB recurrence in countries hosting enrollment sites for either the endTB or TB-PRACTECAL trials.
+$\Omega$: target population consisting of individuals at risk of TB
+recurrence in countries hosting enrollment sites for either the endTB or
+TB-PRACTECAL trials.
 
 . . .
 
 ::: {style="font-size: 80%;"}
-**All methods aim to estimate the casual estimand**: $$\psi(a, b) = \mathbb{E}[Y(a) - Y(b) \mid \Omega]$$ where $Y(a)$ denotes the potential outcome under the 6BPaLM regimen, $Y(b)$ denotes the potential outcome under an endTB regimen (9BLMZ, 9BCLLfxZ, or 9BDLLfxZ).
+**All methods aim to estimate the casual estimand**:
+$$\psi(a, b) = \mathbb{E}[Y(a) - Y(b) \mid \Omega]$$ where $Y(a)$
+denotes the potential outcome under the 6BPaLM regimen, $Y(b)$ denotes
+the potential outcome under an endTB regimen (9BLMZ, 9BCLLfxZ, or
+9BDLLfxZ).
 :::
 
 . . .
 
 ::: {style="font-size: 80%; background-color: #e6f7ff; padding: 10px; border-left: 5px solid #0077b6;"}
-**Next**: We will examine each method in detail—their causal assumptions, statistical estimand, estimators, and implications for our cross-trial comparison.
+**Next**: We will examine each method in detail—their causal
+assumptions, statistical estimand, estimators, and implications for our
+cross-trial comparison.
 :::
 
 ## (1A) Traditional approach: Separate trial analyses
 
+::: {style="font-size: 85%;"}
+**The Core Idea**: Use randomization within each trial, then difference the estimated effects.
+
+What the traditional approach does:
+
+1.  **Analyze each trial separately**: Calculate within trial effect with data from TB-PRACTECAL
+    and endTB separately.
+2.  **Compare the two results**: Take the difference between the two trial-specific effects.
+
+**Strength**: Uses randomization
+
+**Limitation**: Assume both endTB and TB-PRACTECAL has same control arm 
+:::
+
+
+## (1B) Observational Study Approach: Combine treatment arms
+
+::: {style="font-size: 85%;"}
+**The Core Idea**: Ignore control groups and directly compare people who received different treatments.
+
+What the observational approach does:
+
+1.  **Keep only treated participants**: keep people who received 6BPaLM and endTB regimen.
+2.  **Combine treated patients into one dataset**: Everyone in this dataset received an active treatment
+3. **Adjust for differences between patients**
+3. **Compare outcomes**: Differences are attributed to treatment, after adjustment
+
+**key**: We gain simplicity and efficiency by pooling treated arms, but we no longer use randomization—identification relies entirely on covariate adjustment. 
+:::
+
 ## Method (2): Direct and Indirect Fusion Method
 
 ::: {style="font-size: 85%;"}
-**The Core Idea**: What if we could combine data from both trials into one large dataset and then compare the treatments as if it were one big observational study?
+**The Core Idea**: What if we could combine data from both trials into
+one large dataset and then compare the treatments as if it were one big
+observational study?
 
 That’s exactly what the Direct Fusion Method does:
 
-1.  **Merge the Data**: Pool individual patient data from TB-PRACTECAL and endTB.
-2.  **Treat as One Study**: Ignore which trial each patient came from, and directly compare 6BPaLM vs. the 9-month regimens.
-3.  **Adjust for Differences**: Since this isn’t a randomized experiment, we use statistical methods (like weighting) to “balance” the treatment groups and make the comparison fair.
+1.  **Merge the Data**: Pool individual patient data from TB-PRACTECAL
+    and endTB.
+2.  **Treat as One Study**: Ignore which trial each patient came from,
+    and directly compare 6BPaLM vs. the 9-month regimens.
+3.  **Adjust for Differences**: Since this isn’t a randomized
+    experiment, we use statistical methods (like weighting) to “balance”
+    the treatment groups and make the comparison fair.
 :::
 
 . . .
 
 ::: {style="font-size: 85%; background-color: #e6f7ff; padding: 10px; border-left: 5px solid #0077b6;"}
-**key**: Pretend we have one large observational study with patients on either 6BPaLM or a 9-month regimen, then statistically adjust to make the groups comparable.
+**key**: Pretend we have one large observational study with patients on
+either 6BPaLM or a 9-month regimen, then statistically adjust to make
+the groups comparable.
 :::
 
 ## Method (2B): Direct Fusion Method
@@ -211,7 +303,8 @@ That’s exactly what the Direct Fusion Method does:
 ::: {style="font-size: 85%;"}
 **Key Assumption 1: Consistency**
 
-The outcomes we actually observe in the data are the same outcomes that would occur under the treatments patients actually received.
+The outcomes we actually observe in the data are the same outcomes that
+would occur under the treatments patients actually received.
 :::
 
 . . .
@@ -219,9 +312,12 @@ The outcomes we actually observe in the data are the same outcomes that would oc
 ::: {style="font-size: 85%;"}
 **Key Assumption 2: Exchangeability (No Unmeasured Confounding)**
 
-After we account for all important patient characteristics (age, disease severity, HIV status, etc.), **treatment assignment is unrelated to what outcomes would have been under different treatments**.
+After we account for all important patient characteristics (age, disease
+severity, HIV status, etc.), **treatment assignment is unrelated to what
+outcomes would have been under different treatments**.
 
-**Explanation**: If we perfectly adjust for patient differences, who gets which treatment looks "as good as random."
+**Explanation**: If we perfectly adjust for patient differences, who
+gets which treatment looks "as good as random."
 :::
 
 . . .
@@ -229,192 +325,245 @@ After we account for all important patient characteristics (age, disease severit
 ::: {style="font-size: 85%;"}
 **Key Assumption 3: Transportability**
 
-Information from patients on 6BPaLM in TB-PRACTECAL can tell us what would happen if endTB patients took 6BPaLM, and vice versa.
+Information from patients on 6BPaLM in TB-PRACTECAL can tell us what
+would happen if endTB patients took 6BPaLM, and vice versa.
 
-**Explanation**: What we learn about a treatment in one trial can be applied to patients in the other trial.
+**Explanation**: What we learn about a treatment in one trial can be
+applied to patients in the other trial.
 :::
 
 . . .
 
 ::: {style="font-size: 85%; background-color: #fff0f0; padding: 10px; border-left: 5px solid #b22222;"}
-The patient populations from the two trials must be similar enough in important characteristics that we can safely "borrow" information across them. **If the trials studied very different types of patients, this method will fail.**
+The patient populations from the two trials must be similar enough in
+important characteristics that we can safely "borrow" information across
+them. **If the trials studied very different types of patients, this
+method will fail.**
 :::
 
 ## Estimation
 
 ::: {style="font-size: 85%;"}
-We implement the Direct Fusion Method using three estimation method (1) **g-computation** (2) **IPW** and (3) **one-step/doubly robust estimation**:
+We implement the Direct Fusion Method using three estimation method (1)
+**g-computation** (2) **IPW** and (3) **one-step/doubly robust
+estimation**:
 
-**Doubly Robust Means**: - We build two models at the same time: 1. **Outcome Model**: Predicts what the outcome would be under each treatment, given patient characteristics. 2. **Treatment Model**: Predicts which treatment a patient would receive, given their characteristics.
+**Doubly Robust Means**: - We build two models at the same time: 1.
+**Outcome Model**: Predicts what the outcome would be under each
+treatment, given patient characteristics. 2. **Treatment Model**:
+Predicts which treatment a patient would receive, given their
+characteristics.
 
--   Our estimate is reliable if **at least one of these two models is correct**.
+-   Our estimate is reliable if **at least one of these two models is
+    correct**.
 
-We can never be sure which model is exactly right. Doubly robust methods give us “two chances” to get the right answer, making our results much more trustworthy.
+We can never be sure which model is exactly right. Doubly robust methods
+give us “two chances” to get the right answer, making our results much
+more trustworthy.
 :::
 
 . . .
 
 ::: {style="font-size: 85%; background-color: #f0f8ff; padding: 10px; border-left: 5px solid #4682b4;"}
-**In Our Study**: 1. Merge IPD from TB-PRACTECAL and endTB. 2. Use doubly robust estimation, adjusting for country, BMI, HIV status, and other key covariates. 3. Directly compare 6BPaLM against each 9-month regimen in the combined population (especially in PLHIV).
+**In Our Study**: 1. Merge IPD from TB-PRACTECAL and endTB. 2. Use
+doubly robust estimation, adjusting for country, BMI, HIV status, and
+other key covariates. 3. Directly compare 6BPaLM against each 9-month
+regimen in the combined population (especially in PLHIV).
 :::
 
 ## Strengths & Weaknesses: Finding the Balance
 
 ::: {style="font-size: 85%;"}
-**Strengths**: - **Intuitive**: Directly compares the treatments of interest—easy to explain to clinicians. - **Uses All Data**: Leverages all treatment arms from both trials. - **Doubly Robust**: More reliable, less sensitive to model misspecification. - **Efficient**: Good statistical power, works well even with moderate sample sizes.
+**Strengths**: - **Intuitive**: Directly compares the treatments of
+interest—easy to explain to clinicians. - **Uses All Data**: Leverages
+all treatment arms from both trials. - **Doubly Robust**: More reliable,
+less sensitive to model misspecification. - **Efficient**: Good
+statistical power, works well even with moderate sample sizes.
 
-**Challenges & Limitations**: - **Strong Assumptions**: Transportability may not hold if trial populations differ substantially. - **Requires Many Covariates**: Must measure and adjust for all important confounding factors. - **Does Not Use Randomization**: Ignores the fact that the original trials were randomized.
+**Challenges & Limitations**: - **Strong Assumptions**: Transportability
+may not hold if trial populations differ substantially. - **Requires
+Many Covariates**: Must measure and adjust for all important confounding
+factors. - **Does Not Use Randomization**: Ignores the fact that the
+original trials were randomized.
 :::
 
 . . .
 
 ::: {style="font-size: 85%;"}
-**Why We Chose This Method**: For our research question (“Is 6BPaLM better than 9-month regimens for PLHIV?”), the Direct Fusion Method: - Gives the most direct answer - Allows focused analysis of the HIV subgroup - The doubly robust property gives us more confidence in the results
+**Why We Chose This Method**: For our research question (“Is 6BPaLM
+better than 9-month regimens for PLHIV?”), the Direct Fusion Method: -
+Gives the most direct answer - Allows focused analysis of the HIV
+subgroup - The doubly robust property gives us more confidence in the
+results
 :::
 
 ## Summary: Direct Fusion Method
 
 ::: {style="font-size: 85%;"}
-**In One Sentence**: The Direct Fusion Method lets us “directly compare” treatments that were never tested head-to-head in the same trial, by combining trial data and applying advanced statistical adjustment.
+**In One Sentence**: The Direct Fusion Method lets us “directly compare”
+treatments that were never tested head-to-head in the same trial, by
+combining trial data and applying advanced statistical adjustment.
 
-**For Our Research**: This is **one of the most straightforward and robust approaches** to answer whether 6BPaLM is preferable to 9-month regimens for people living with HIV, provided the trial populations are sufficiently similar.
+**For Our Research**: This is **one of the most straightforward and
+robust approaches** to answer whether 6BPaLM is preferable to 9-month
+regimens for people living with HIV, provided the trial populations are
+sufficiently similar.
 :::
 
 . . .
 
 ::: {style="font-size: 85%; background-color: #e6f7ff; padding: 10px; border-left: 5px solid #0077b6;"}
-**Next**: We’ll see how this method compares to the other three approaches, and why it’s particularly suited to our research question.
+**Next**: We’ll see how this method compares to the other three
+approaches, and why it’s particularly suited to our research question.
 :::
-
-
 
 ## Method (2A): Indirect Method – The Clever Decomposition
 
 ::: {style="font-size: 85%;"}
-**The Core Idea**:
-Instead of directly comparing 6BPaLM vs. 9-month regimens, we break the problem into **two parts**:
+**The Core Idea**: Instead of directly comparing 6BPaLM vs. 9-month
+regimens, we break the problem into **two parts**:
 
-1. **The difference in treatment effects**  
-   How much better is 6BPaLM vs. *its* standard care, compared to how much better a 9-month regimen is vs. *its* standard care?
+1.  **The difference in treatment effects**\
+    How much better is 6BPaLM vs. *its* standard care, compared to how
+    much better a 9-month regimen is vs. *its* standard care?
 
-2. **The difference in standard care**  
-   How different are the two standard care treatments themselves?
+2.  **The difference in standard care**\
+    How different are the two standard care treatments themselves?
 :::
 
 . . .
 
 ::: {style="font-size: 85%; background-color: #e6f7ff; padding: 10px; border-left: 5px solid #0077b6;"}
-**Simple formula**:  
-Total difference = (Treatment effect difference) + (Standard care difference)
+**Simple formula**:\
+Total difference = (Treatment effect difference) + (Standard care
+difference)
 
-**Mathematically**:  
-$$\psi(a, b)= \theta + \phi $$ 
-where $\theta := \mathbb{E}[Y(a)-Y(c_1)\mid\Omega] - \mathbb{E}[Y(b)-Y(c_2)\mid\Omega]$, difference in treatment effects,
-and $\phi := \mathbb{E}[Y(c_1)-Y(c_2)\mid\Omega],$ the difference between the two standard care arms.
+**Mathematically**:\
+$$\psi(a, b)= \theta + \phi $$ where
+$\theta := \mathbb{E}[Y(a)-Y(c_1)\mid\Omega] - \mathbb{E}[Y(b)-Y(c_2)\mid\Omega]$,
+difference in treatment effects, and
+$\phi := \mathbb{E}[Y(c_1)-Y(c_2)\mid\Omega],$ the difference between
+the two standard care arms.
 :::
 
 ## The Two Components: A Closer Look
-::: {style="font-size: 85%;"}
 
-- **Component 1: Treatment Effect Difference ($\theta$)**
-  - In **TB-PRACTECAL**: 6BPaLM vs. Standard Care 1
-  - In **endTB**: 9-month regimen vs. Standard Care 2
-  - Captures how much better each investigational regimen is compared to its own control
+::: {style="font-size: 85%;"}
+-   **Component 1: Treatment Effect Difference (**$\theta$)
+    -   In **TB-PRACTECAL**: 6BPaLM vs. Standard Care 1
+    -   In **endTB**: 9-month regimen vs. Standard Care 2
+    -   Captures how much better each investigational regimen is
+        compared to its own control
 
 $\theta = (\text{Effect of 6BPaLM vs. SC1}) - (\text{Effect of 9-month regimen vs. SC2})$
 
-- **Component 2: Standard Care Difference ($\phi$)**
-  - Direct comparison: Standard Care 1 vs. Standard Care 2
-  - Captures differences in background treatment across trials
-  - Accounts for regional variations in standard care
-
+-   **Component 2: Standard Care Difference (**$\phi$)
+    -   Direct comparison: Standard Care 1 vs. Standard Care 2
+    -   Captures differences in background treatment across trials
+    -   Accounts for regional variations in standard care
 :::
 
 . . .
 
 ::: {style="font-size: 85%; background-color: #fff0f0; padding: 10px; border-left: 5px solid #b22222;"}
-**Fact of Component 2**:  
-We can estimate $\phi$ using the **Direct Method** from before, since $\phi := \mathbb{E}\left[ Y(c_1) - Y(c_2) \mid \Omega \right]$ coincides with the pairwise contrast $\phi = \psi(c_1, c_2)$. 
+**Fact of Component 2**:\
+We can estimate $\phi$ using the **Direct Method** from before, since
+$\phi := \mathbb{E}\left[ Y(c_1) - Y(c_2) \mid \Omega \right]$ coincides
+with the pairwise contrast $\phi = \psi(c_1, c_2)$.
 :::
 
 ## Key Assumptions: Why This Decomposition Works
 
 ::: {style="font-size: 85%;"}
-**Assumption 1: Within-trial Randomization Still Holds**
-For $\theta$ estimation, we can still use the fact that within each trial, treatment was randomized.
+**Assumption 1: Within-trial Randomization Still Holds** For $\theta$
+estimation, we can still use the fact that within each trial, treatment
+was randomized.
 
-**Assumption 2: Different Transportability for Different Parts**
-- For $\phi$ (standard care comparison): We only need to transport across **countries**
-- For $\theta$ (treatment effects): We need to transport across **all patient characteristics**
+**Assumption 2: Different Transportability for Different Parts** - For
+$\phi$ (standard care comparison): We only need to transport across
+**countries** - For $\theta$ (treatment effects): We need to transport
+across **all patient characteristics**
 
-**Assumption 3: Positivity**
-Patients in both trials have some chance of receiving either treatment in their respective trial.
+**Assumption 3: Positivity** Patients in both trials have some chance of
+receiving either treatment in their respective trial.
 :::
 
 . . .
 
 ::: {style="font-size: 85%; background-color: #f0f8ff; padding: 10px; border-left: 5px solid #4682b4;"}
-**The Clever Part**:  
-We use randomization where we can (within trials for treatment effects), and we make weaker assumptions for the standard care comparison.
+**The Clever Part**:\
+We use randomization where we can (within trials for treatment effects),
+and we make weaker assumptions for the standard care comparison.
 :::
 
 ## How It Works: Combining the Pieces
 
 ::: {style="font-size: 85%;"}
-- **Step 1: Estimate Standard Care Difference**, $\hat{\phi}$
-  - Use the Direct Method to compare SC1 vs. SC2
-  - This tells us how different the background treatments are
-
-- **Step 2: Estimate Treatment Effect Difference,** $\hat{\theta}$
-  - Estimate 6BPaLM effect vs. SC1 in TB-PRACTECAL, and 9-month effect vs. SC2 in endTB
-  - Transport these effects to the combined population
-  - Take the difference: $\theta$ = (6BPaLM effect) - (9-month effect)
-
-- **Step 3: Add Them Up**
-$\hat{\psi}(a, b)$ = $\hat{\theta}$ + $\hat{\phi}$
+-   **Step 1: Estimate Standard Care Difference**, $\hat{\phi}$
+    -   Use the Direct Method to compare SC1 vs. SC2
+    -   This tells us how different the background treatments are
+-   **Step 2: Estimate Treatment Effect Difference,** $\hat{\theta}$
+    -   Estimate 6BPaLM effect vs. SC1 in TB-PRACTECAL, and 9-month
+        effect vs. SC2 in endTB
+    -   Transport these effects to the combined population
+    -   Take the difference: $\theta$ = (6BPaLM effect) - (9-month
+        effect)
+-   **Step 3: Add Them Up** $\hat{\psi}(a, b)$ = $\hat{\theta}$ +
+    $\hat{\phi}$
 :::
 
 . . .
 
 ::: {style="font-size: 85%; background-color: #e6f7ff; padding: 10px; border-left: 5px solid #0077b6;"}
-**In Estimation**, we also proposed hree estimation method (1) **g-computation** (2) **IPW** and (3) **one-step/doubly robust estimation** to estimate both components and combine them for the final contrast. Statistical properities such as consistency and asymptotic normality are established under standard regularity conditions.
+**In Estimation**, we also proposed hree estimation method (1)
+**g-computation** (2) **IPW** and (3) **one-step/doubly robust
+estimation** to estimate both components and combine them for the final
+contrast. Statistical properities such as consistency and asymptotic
+normality are established under standard regularity conditions.
 :::
 
 ## Strengths & Weaknesses
 
 ::: {style="font-size: 85%;"}
-
-- **Strengths**
-  - **Explicitly handles different standard cares** — a major advantage
-  - **Uses randomization where possible** — more credible treatment effect estimates
-  - **Flexible assumptions** — weaker assumptions for the standard care comparison
-
-- **Challenges**
-  - **More complex** — requires estimating two components
-  - **Multiple assumptions** — each component has its own requirements
-
+-   **Strengths**
+    -   **Explicitly handles different standard cares** — a major
+        advantage
+    -   **Uses randomization where possible** — more credible treatment
+        effect estimates
+    -   **Flexible assumptions** — weaker assumptions for the standard
+        care comparison
+-   **Challenges**
+    -   **More complex** — requires estimating two components
+    -   **Multiple assumptions** — each component has its own
+        requirements
 :::
 
 . . .
 
 ::: {style="font-size: 85%; background-color: #e6f7ff; padding: 10px; border-left: 5px solid #0077b6;"}
-When standard care differs substantially between trials, this method **explicitly accounts for that difference**, making it potentially more accurate than approaches that ignore it.
+When standard care differs substantially between trials, this method
+**explicitly accounts for that difference**, making it potentially more
+accurate than approaches that ignore it.
 :::
-
 
 ## Summary: Indirect Method
 
 ::: {style="font-size: 85%;"}
+The Indirect Method breaks the comparison into "how much better the
+treatments are than their respective standard cares" plus "how different
+those standard cares are from each other."
 
-The Indirect Method breaks the comparison into "how much better the treatments are than their respective standard cares" plus "how different those standard cares are from each other."
-
-**The Key Insight**:  
-By separating treatment effects from background care differences, we get a clearer picture of what is really driving any observed differences between 6BPaLM and 9-month regimens.
+**The Key Insight**:\
+By separating treatment effects from background care differences, we get
+a clearer picture of what is really driving any observed differences
+between 6BPaLM and 9-month regimens.
 :::
 
 . . .
 
 ::: {style="font-size: 85%; background-color: #f0f8ff; padding: 10px; border-left: 5px solid #4682b4;"}
-**For Our Study**:  
-This method is particularly valuable because TB-PRACTECAL and endTB had different standard care regimens—something we can't ignore when comparing their results.
+**For Our Study**:\
+This method is particularly valuable because TB-PRACTECAL and endTB had
+different standard care regimens—something we can't ignore when
+comparing their results.
 :::
